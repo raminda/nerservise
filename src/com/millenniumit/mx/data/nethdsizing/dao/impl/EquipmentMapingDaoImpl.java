@@ -8,7 +8,6 @@ package com.millenniumit.mx.data.nethdsizing.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.Entity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -23,7 +22,6 @@ import com.millenniumit.mx.data.nethdsizing.domain.ItemTypes;
  * @author Raminda
  *
  */
-@Entity
 @SuppressWarnings("unchecked")
 public class EquipmentMapingDaoImpl implements EquipmentMapingDao {
 	

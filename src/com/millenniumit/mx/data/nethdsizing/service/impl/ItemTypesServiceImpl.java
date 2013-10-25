@@ -1,11 +1,7 @@
 package com.millenniumit.mx.data.nethdsizing.service.impl;
 
 import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import org.hibernate.SessionFactory;
-
 import com.millenniumit.mx.data.nethdsizing.domain.ItemTypes;
 import com.millenniumit.mx.data.nethdsizing.service.ItemTypesService;
 import com.millenniumit.mx.data.nethdsizing.dao.ItemTypesDao;
@@ -18,11 +14,9 @@ import com.millenniumit.mx.data.nethdsizing.dao.impl.ItemTypesDaoImpl;
  */
 
 
-@Entity
 public class  ItemTypesServiceImpl implements  ItemTypesService {
 
 	
-	@ManyToOne
 	private ItemTypesDao ItemTypesDao;
 	
 	protected ItemTypesServiceImpl() {

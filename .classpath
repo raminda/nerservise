@@ -17,7 +17,6 @@
 	<classpathentry kind="lib" path="lib/log4j.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.18-bin.jar"/>
 	<classpathentry kind="lib" path="lib/mysql.jar"/>
-	<classpathentry kind="lib" path="lib/nethdsizing.jar"/>
 	<classpathentry kind="lib" path="lib/org.apache.commons.codec.jar"/>
 	<classpathentry kind="lib" path="lib/org.apache.commons.dbcp.jar"/>
 	<classpathentry kind="lib" path="lib/org.apache.servicemix.bundles.commons-dbcp-1.2.2_1.jar"/>

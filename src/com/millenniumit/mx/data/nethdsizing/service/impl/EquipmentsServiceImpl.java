@@ -1,12 +1,7 @@
 package com.millenniumit.mx.data.nethdsizing.service.impl;
 import java.sql.Date;
 import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import org.hibernate.SessionFactory;
-
-
 import com.millenniumit.mx.data.nethdsizing.dao.EquipmentsDao;
 import com.millenniumit.mx.data.nethdsizing.dao.impl.EquipmentsDaoImpl;
 import com.millenniumit.mx.data.nethdsizing.domain.Equipments;
@@ -18,11 +13,8 @@ import com.millenniumit.mx.data.nethdsizing.service.EquipmentsService;
 	 * @author Raminda
 	 *
 	 */
-
-@Entity
 public class  EquipmentsServiceImpl implements  EquipmentsService {
 		
-		@ManyToOne
 		private EquipmentsDao equipmentsDao;
 
 		protected EquipmentsServiceImpl() {

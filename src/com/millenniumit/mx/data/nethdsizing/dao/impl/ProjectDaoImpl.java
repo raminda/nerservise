@@ -1,8 +1,6 @@
 package com.millenniumit.mx.data.nethdsizing.dao.impl;
 
 import java.util.List;
-
-import javax.persistence.Entity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,8 +8,6 @@ import com.millenniumit.mx.data.nethdsizing.dao.ProjectDao;
 import com.millenniumit.mx.data.nethdsizing.domain.Company;
 import com.millenniumit.mx.data.nethdsizing.domain.Project;
 
-
-@Entity
 @SuppressWarnings("unchecked")
 public class ProjectDaoImpl implements ProjectDao {
 	

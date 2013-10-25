@@ -2,8 +2,6 @@ package com.millenniumit.mx.data.nethdsizing.dao.impl;
 
 import java.sql.Date;
 import java.util.List;
-
-import javax.persistence.Entity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -15,7 +13,6 @@ import com.millenniumit.mx.data.nethdsizing.domain.Packages;
  * @author DECANS
  *
  */
-@Entity
 @SuppressWarnings("unchecked")
 public class PackagesDaoImpl implements PackagesDao {
 

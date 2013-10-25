@@ -4,6 +4,8 @@
 package com.millenniumit.mx.test;
 
 
+import java.util.Date;
+
 import org.hibernate.SessionFactory;
 import com.millenniumit.mx.Session.Sfactory;
 import com.millenniumit.mx.data.nethdsizing.domain.Company;
@@ -60,7 +62,7 @@ public class TestEmp {
 
 	ItemTypes itemTypes =new ItemTypes();
 	itemTypes.setAccsessLevel(1);
-	itemTypes.setTypeName("ffsdftr66");
+	itemTypes.setTypeName("ffsdfgfh66");
 	ItemTypesService itemTypesService=new ItemTypesServiceImpl(SessionFactory);
 	try {
 		itemTypesService.save(itemTypes);
@@ -102,7 +104,7 @@ public class TestEmp {
 	} catch (Exception e) {
 		System.out.println("Project  : "+e.getMessage());
 	}
-	java.util.Date date=new java.util.Date("2010/10/05");
+	Date date=new Date();
 	Packages packages=new  Packages();
 	packages.setBasePrice(100);
 	packages.setComment("22dfsd");

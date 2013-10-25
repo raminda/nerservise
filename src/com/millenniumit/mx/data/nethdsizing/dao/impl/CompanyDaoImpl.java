@@ -8,7 +8,6 @@ package com.millenniumit.mx.data.nethdsizing.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.Entity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,7 +19,6 @@ import com.millenniumit.mx.data.nethdsizing.domain.Company;
  * @author DECANS <draminda@gmail.com>
  *
  */
-@Entity
 @SuppressWarnings("unchecked")
 public class CompanyDaoImpl implements CompanyDao {
 	

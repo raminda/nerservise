@@ -2,9 +2,6 @@ package com.millenniumit.mx.data.nethdsizing.service.impl;
 
 import java.sql.Date;
 import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import org.hibernate.SessionFactory;
 
 import com.millenniumit.mx.data.nethdsizing.dao.PackagesDao;
@@ -17,12 +14,8 @@ import com.millenniumit.mx.data.nethdsizing.service.PackagesService;
  * @author Raminda
  *
  */
-
-
-@Entity
 public class PackagesServiceImpl implements PackagesService {
 
-	@ManyToOne
 	private PackagesDao PackagesDao;
 
 	protected PackagesServiceImpl() {

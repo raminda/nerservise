@@ -6,9 +6,6 @@ package com.millenniumit.mx.data.nethdsizing.service.impl;
 */
 
 import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import org.hibernate.SessionFactory;
 
 import com.millenniumit.mx.data.nethdsizing.domain.Equipments;
@@ -23,11 +20,8 @@ import com.millenniumit.mx.data.nethdsizing.dao.impl.EquipmentsBulkDaoImpl;
  * @author Raminda
  *
  */
-
-@Entity
 public class  EquipmentBulkServiceImpl implements  EquipmentsBulkService {
 
-	@ManyToOne
 	private EquipmentbulkDao EquipmentsBulkDao;
 
 	protected EquipmentBulkServiceImpl() {
