@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="build-service" basedir="." default="build-service">
+	<target name="build-service">
+		<mkdir dir="service-classes" />
+
+		<path id="service.classpath">
+			<fileset dir="lib" includes="*.jar" excludes="nethdsizing.jar" />
+		</path>
+
+		<delete file="lib/nethdsizing.jar" />
+
+		<javac includeantruntime="false" classpathref="service.classpath" srcdir="src/com/millenniumit/mx/data" destdir="service-classes" debug="on" debuglevel="lines,vars,source" />
+
+		<zip basedir="service-classes" destfile="lib/nethdsizing.jar" />
+
+		<delete dir="service-classes" />
+	</target>
+</project>
+
