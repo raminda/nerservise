@@ -53,7 +53,7 @@ public class ItemTypesDaoImpl implements ItemTypesDao {
 		session=SessionFactory.getCurrentSession();
 		trans=session.beginTransaction();
 		return (ItemTypes) session
-				.createQuery(table+"  where ID =:ID and TypeName!='base'")
+				.createQuery(table+"where ID =:ID and TypeName!='base'")
 				.setParameter("ID", ID).uniqueResult();
 	}
 	

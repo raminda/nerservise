@@ -2,7 +2,6 @@ package com.millenniumit.mx.data.nethdsizing.domain;
 import java.io.Serializable;
 import java.util.Calendar;
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 
 
 /**
@@ -26,6 +25,7 @@ public class Equipments extends AuditFields implements Serializable {
 	@JoinColumn(name = "itemtypes",nullable=false)
 	private ItemTypes ItemTypes;
 	
+	@Column(nullable=false,unique = true)
 	private String ItemName;
 	
 	private String Summary;

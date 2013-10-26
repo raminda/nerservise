@@ -1,4 +1,4 @@
-package com.millenniumit.mx.Session;
+package com.millenniumit.mx.data.Session;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;

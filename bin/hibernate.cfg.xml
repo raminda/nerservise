@@ -15,14 +15,6 @@
 		
 		<!-- <property name="hibernate.default_schema">nethdsizing</property> -->
         
-       <!--  <property name="hibernate.connection.datasource">java:comp/env/NetHDSizings</property>
-        for web xml
-        <resource-ref>
-        	<description>This is a MySQL database connection</description>
-  				<res-ref-name>jdbc/sakila</res-ref-name>
-  				<res-type>javax.sql.DataSource</res-type>
-  				<res-auth>Container</res-auth>
-		</resource-ref> -->
 		
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">4</property>
@@ -47,7 +39,17 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
        <!-- <mapping resource="org/hibernate/tutorial/domain/Event.hbm.xml"/>
         <mapping resource="org/hibernate/tutorial/domain/Person.hbm.xml"/> -->
-
+		
+		<mapping  class="com.millenniumit.mx.data.nethdsizing.domain.Company"/> 
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.EquipmentBulk"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.EquipmentMaping"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.Equipments"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.ItemTypes"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.Packages"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.Project"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.ProjectItems"/>
+    	<mapping class="com.millenniumit.mx.data.nethdsizing.domain.VersionMap"/>
+    	
     </session-factory>
 
 </hibernate-configuration>
