@@ -41,7 +41,7 @@ public class EquipmentsDaoImpl implements EquipmentsDao {
 				this.SessionFactory = SessionFactory;
 			}
 			public EquipmentsDaoImpl(SessionFactory SessionFactory){
-				table="from Equipments ";
+				table="from equipments ";
 				this.SessionFactory=SessionFactory;
 			}
 	//*******************************************end************************************************

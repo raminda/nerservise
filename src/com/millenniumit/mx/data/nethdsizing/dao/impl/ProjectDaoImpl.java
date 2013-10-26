@@ -32,7 +32,7 @@ public class ProjectDaoImpl implements ProjectDao {
 		this.SessionFactory = ITICSessionFactory;
 	}
 	public ProjectDaoImpl(SessionFactory SessionFactory){
-		table="from Project ";
+		table="from project ";
 		this.SessionFactory=SessionFactory;
 	}
 	@Override

@@ -10,7 +10,8 @@ import javax.persistence.*;
  *
  **/
 
-@Entity
+@Entity(name="equipments")
+@Table(name="equipments")
 public class Equipments extends AuditFields implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -21,8 +22,8 @@ public class Equipments extends AuditFields implements Serializable {
 	@GeneratedValue(strategy=GenerationType.TABLE,generator="ColumnHandl")
 	private Integer ID;
 	
-	@ManyToOne(cascade= CascadeType.REFRESH,fetch=FetchType.LAZY)
-	@JoinColumn(name = "itemtypes",nullable=false)
+	@ManyToOne(cascade= CascadeType.PERSIST)
+	@JoinColumn(name = "ItemTypes",nullable=false)
 	private ItemTypes ItemTypes;
 	
 	@Column(nullable=false,unique = true)

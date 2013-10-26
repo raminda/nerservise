@@ -48,7 +48,7 @@ public class CompanyDaoImpl implements CompanyDao {
 	//*******************************************end************************************************
 	public CompanyDaoImpl(SessionFactory SessionFactory){
 		this.SessionFactory=SessionFactory;
-		table="from Company ";
+		table="from company ";
 	}	
 			
 	/**

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
 /**
@@ -15,7 +16,8 @@ import javax.persistence.TableGenerator;
  * @category for Audit the data read write operations  
  */
 
-@Entity
+@Entity(name="itemtypes")
+@Table(name="itemtypes")
 public class ItemTypes extends AuditFields implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -26,7 +28,7 @@ public class ItemTypes extends AuditFields implements Serializable {
 	
 	@Column(nullable=false,unique = true)
 	private String TypeName;
-	@Column(columnDefinition="Integer default '1'")
+	//@Column(columnDefinition="Integer default '1'")
 	private Integer AccsessLevel;
 	
 	/**
@@ -45,7 +47,6 @@ public class ItemTypes extends AuditFields implements Serializable {
 	/**
 	 * @return the typeName
 	 */
-	@Column(nullable = false) 
 	public String getTypeName() {
 		return TypeName;
 	}

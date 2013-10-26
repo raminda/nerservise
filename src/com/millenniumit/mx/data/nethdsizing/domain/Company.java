@@ -13,7 +13,8 @@ import javax.persistence.*;
  **/
 
 
-@Entity
+@Entity(name="company")
+@Table(name="company")
 public class Company extends AuditFields implements Serializable {
 
 	

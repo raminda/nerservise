@@ -38,7 +38,7 @@ public class ItemTypesDaoImpl implements ItemTypesDao {
 				this.SessionFactory = ITICSessionFactory;
 			}
 			public ItemTypesDaoImpl(SessionFactory SessionFactory){
-				table="from ItemTypes ";
+				table="from itemtypes ";
 				this.SessionFactory=SessionFactory;
 			}
 		//*******************************************end************************************************

@@ -3,14 +3,14 @@ package com.millenniumit.mx.data.nethdsizing.domain;
 import java.io.Serializable;
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 /**
  * 
  * @author DECANS <draminda@gmail.com>
  *
  **/
 
-@Entity
+@Entity(name="projectItems")
+@Table(name="projectItems")
 public class ProjectItems extends AuditFields implements Serializable {
 
 	
@@ -26,7 +26,7 @@ public class ProjectItems extends AuditFields implements Serializable {
 	private VersionMap VersionID;	
 
 	@ManyToOne(cascade= CascadeType.PERSIST)
-	@JoinColumn(name = "Packages")
+	@JoinColumn(name = "Packages",nullable=false)
 	private Packages PackageID;
 
 	private String SiteID;

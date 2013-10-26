@@ -9,8 +9,8 @@ import javax.persistence.*;
  * @author DECANS <draminda@gmail.com>
  *
  **/
-@Table(uniqueConstraints= @UniqueConstraint(columnNames={"Equipment", "Package"}))
-@Entity
+@Entity(name="equipmentbulk")
+@Table(name="equipmentbulk",uniqueConstraints= @UniqueConstraint(columnNames={"Equipment", "Package"}))
 public class EquipmentBulk extends AuditFields implements Serializable {
 
 

@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.sql.Blob;
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 
 
 
@@ -15,7 +14,8 @@ import javax.persistence.ManyToOne;
  * @author DECANS <draminda@gmail.com>
  *
  **/
-@Entity
+@Entity(name="project")
+@Table(name="project")
 public class Project extends AuditFields implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -30,6 +30,7 @@ public class Project extends AuditFields implements Serializable {
 	private Company Company;
 	
 	private Long TotalAmount;
+	
 	@Column(nullable=false,unique = true)
 	private String ProjectName;						
 		

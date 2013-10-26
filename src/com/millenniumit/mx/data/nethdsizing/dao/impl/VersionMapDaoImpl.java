@@ -43,7 +43,7 @@ public class VersionMapDaoImpl implements VersionMapDao {
 				this.SessionFactory = SessionFactory;
 			}
 			public VersionMapDaoImpl(SessionFactory SessionFactory){
-				table="from VersionMap ";
+				table="from versionMap ";
 				this.SessionFactory=SessionFactory;
 			}
 			//*******************************************end************************************************

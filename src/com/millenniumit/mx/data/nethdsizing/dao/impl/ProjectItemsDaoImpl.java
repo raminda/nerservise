@@ -43,7 +43,7 @@ public class ProjectItemsDaoImpl implements ProjectItemsDao {
 				this.SessionFactory = SessionFactory;
 			}
 			public ProjectItemsDaoImpl(SessionFactory SessionFactory){
-				table="from ProjectItems ";
+				table="from projectItems ";
 				this.SessionFactory=SessionFactory;
 			}
 			//*******************************************end************************************************

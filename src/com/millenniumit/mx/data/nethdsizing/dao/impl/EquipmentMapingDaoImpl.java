@@ -48,7 +48,7 @@ public class EquipmentMapingDaoImpl implements EquipmentMapingDao {
 				this.SessionFactory = ITICSessionFactory;
 			}
 			public EquipmentMapingDaoImpl(SessionFactory SessionFactory){
-				table="from Equipmentmaping ";
+				table="from equipmentmaping ";
 				
 				this.SessionFactory=SessionFactory;
 			}

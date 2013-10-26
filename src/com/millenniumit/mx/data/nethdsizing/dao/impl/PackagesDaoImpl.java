@@ -39,7 +39,7 @@ public class PackagesDaoImpl implements PackagesDao {
 	}
 	
 	public PackagesDaoImpl(SessionFactory SessionFactory){
-		table="from Packages ";
+		table="from packages ";
 		this.SessionFactory=SessionFactory;
 	}
 	/**

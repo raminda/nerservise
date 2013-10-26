@@ -5,7 +5,6 @@ package com.millenniumit.mx.data.nethdsizing.domain;
 import java.io.Serializable;
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 
 
 
@@ -14,7 +13,8 @@ import javax.persistence.ManyToOne;
  * @author DECANS <draminda@gmail.com>
  *
  **/
-@Entity
+@Entity(name="versionMap")
+@Table(name="versionMap")
 public class VersionMap extends AuditFields implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -25,11 +25,11 @@ public class VersionMap extends AuditFields implements Serializable {
 	private int ID;
 	
 	@ManyToOne(cascade= CascadeType.PERSIST)
-	@JoinColumn(name = "Project")
+	@JoinColumn(name = "Project",nullable=false)
 	private Project ProjectID;
-	
+	@Column(nullable=false)
 	private String OptionID;
-	
+	@Column(nullable=false)
 	private String Version;
 
 	/**

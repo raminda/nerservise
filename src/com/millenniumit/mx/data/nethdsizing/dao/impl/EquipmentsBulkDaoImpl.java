@@ -43,7 +43,7 @@ public class EquipmentsBulkDaoImpl implements EquipmentbulkDao {
 			}
 	
 			public EquipmentsBulkDaoImpl(SessionFactory SessionFactory) {
-				table="from Equipmentbulk ";
+				table="from equipmentbulk ";
 				this.SessionFactory=SessionFactory;
 			}		
 	//*******************************************end************************************************

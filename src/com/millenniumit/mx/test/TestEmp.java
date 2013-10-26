@@ -50,6 +50,7 @@ public class TestEmp {
 		
 		Sfactory sfactory=new Sfactory();
 		SessionFactory SessionFactory=sfactory.getSessionFactory();
+		
 		Company company=new Company();
 		company.setCompanyName("nirobi");
 		CompanyService companyService= new CompanyServiceImpl(SessionFactory);

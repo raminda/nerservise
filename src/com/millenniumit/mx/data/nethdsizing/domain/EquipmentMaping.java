@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 
 
 /**
@@ -13,8 +12,8 @@ import javax.persistence.ManyToOne;
  *
  **/
 
-@Table(uniqueConstraints= @UniqueConstraint(columnNames={"CEquipment", "PEquipment"}))
-@Entity
+@Entity(name="equipmentmaping")
+@Table(name="equipmentmaping", uniqueConstraints= @UniqueConstraint(columnNames={"CEquipment", "PEquipment"}))
 public class EquipmentMaping extends AuditFields implements Serializable {
 
 	

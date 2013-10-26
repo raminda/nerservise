@@ -11,7 +11,8 @@ import javax.persistence.*;
  * @author DECANS <draminda@gmail.com>
  *
  **/
-@Entity
+@Entity(name="packages")
+@Table(name="packages")
 public class Packages extends AuditFields implements Serializable {
 
 	/**
@@ -23,7 +24,8 @@ public class Packages extends AuditFields implements Serializable {
 	@TableGenerator(name="ColumnHandl",table="ColumnHandler",pkColumnName="IdColumn",pkColumnValue="PackagesValue",allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.TABLE,generator="ColumnHandl")
 	private Integer ID;
-
+	
+	@Column(nullable=false,unique = true)
 	private String PackageName;
 	
 	private String Summery;
