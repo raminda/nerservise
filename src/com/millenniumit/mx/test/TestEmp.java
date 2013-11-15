@@ -51,6 +51,37 @@ public class TestEmp {
 		Sfactory sfactory=new Sfactory();
 		SessionFactory SessionFactory=sfactory.getSessionFactory();
 		
+		/**
+		 * base items
+		 */
+		ItemTypes itemTypes =new ItemTypes();
+		itemTypes.setAccsessLevel(0);
+		itemTypes.setTypeName("Base");
+		ItemTypesService itemTypesService=new ItemTypesServiceImpl(SessionFactory);
+		try {
+			itemTypesService.save(itemTypes);
+		} catch (Exception e) {
+			System.out.println("Item Type  : "+e.getMessage());
+		}
+		
+		Equipments equipments=new Equipments();
+		equipments.setItemName("Base");
+		equipments.setItemType(itemTypes);
+		equipments.setITIC_Descrip("Base");
+		equipments.setTec_Descrip("Base");
+		equipments.setSummary("Base");
+		equipments.setPrice(0);
+		EquipmentsService equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
+		try {
+			equipmentsService.save(equipments);	
+		} catch (Exception e) {
+			System.out.println("Eq  : "+e.getMessage());
+		}
+		
+		/**
+		 * end base
+		 */
+		
 		Company company=new Company();
 		company.setCompanyName("nirobi");
 		CompanyService companyService= new CompanyServiceImpl(SessionFactory);
@@ -60,30 +91,54 @@ public class TestEmp {
 			System.out.println("company : "+e.getMessage());
 		}
 	
-		ItemTypes itemTypes =new ItemTypes();
-		itemTypes.setAccsessLevel(1);
-		itemTypes.setTypeName("Pros");
-		ItemTypesService itemTypesService=new ItemTypesServiceImpl(SessionFactory);
+		itemTypes =new ItemTypes();
+		itemTypes.setAccsessLevel(2);
+		itemTypes.setTypeName("Ram");
+		itemTypesService=new ItemTypesServiceImpl(SessionFactory);
 		try {
 			itemTypesService.save(itemTypes);
 		} catch (Exception e) {
 			System.out.println("Item Type  : "+e.getMessage());
 		}
 		
-		Equipments equipments=new Equipments();
-		equipments.setItemName("Pros");
-		equipments.setItemType(itemTypesService.getItemTypess(3));
+		itemTypes =new ItemTypes();
+		itemTypes.setAccsessLevel(1);
+		itemTypes.setTypeName("Server");
+		itemTypesService=new ItemTypesServiceImpl(SessionFactory);
+		try {
+			itemTypesService.save(itemTypes);
+		} catch (Exception e) {
+			System.out.println("Item Type  : "+e.getMessage());
+		}
+		
+		equipments=new Equipments();
+		equipments.setItemName("Kingston");
+		equipments.setItemType(itemTypesService.getItemTypess(2));
 		equipments.setITIC_Descrip("Eq1 is best");
 		equipments.setTec_Descrip("Tec Eq1 is most best");
 		equipments.setSummary("best eq in eq1 catagory");
 		equipments.setPrice(1000);
-		EquipmentsService equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
+		equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
 		try {
 			equipmentsService.save(equipments);	
 		} catch (Exception e) {
 			System.out.println("Eq  : "+e.getMessage());
 		}	
-				
+		
+		equipments=new Equipments();
+		equipments.setItemName("Server 123");
+		equipments.setItemType(itemTypesService.getItemTypess(3));
+		equipments.setITIC_Descrip("Eq1 is best");
+		equipments.setTec_Descrip("Tec Eq1 is most best");
+		equipments.setSummary("best eq in eq1 catagory");
+		equipments.setPrice(1000);
+		equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
+		try {
+			equipmentsService.save(equipments);	
+		} catch (Exception e) {
+			System.out.println("Eq  : "+e.getMessage());
+		}	
+		
 		EquipmentMaping equipmentmaping=new EquipmentMaping();
 		equipmentmaping.setParentID(equipmentsService.getEquipments(3));
 		equipmentmaping.setChildID(equipmentsService.getEquipments(2));
@@ -97,20 +152,22 @@ public class TestEmp {
 		Project project=new  Project();
 		project.setAmount((long) 1500);
 		project.setCompany(companyService.get(1));
-		project.setProjectName("Dhig");
+		project.setProjectName("Dhilli");
 		ProjectsService projectsService=new ProjectsServiceImpl(SessionFactory);
 		try {
 			projectsService.save(project);
 		} catch (Exception e) {
 			System.out.println("Project  : "+e.getMessage());
 		}
+		
 		Date date=new Date();
+		
 		Packages packages=new  Packages();
 		packages.setBasePrice(100);
-		packages.setComment("22dfsd");
+		packages.setComment("Server 1");
 		packages.setEOLDate(date);
-		packages.setPackageName("22fsdfdgdfgfd");
-		packages.setSummary("34dsfdgfg4teter");
+		packages.setPackageName("Server");
+		packages.setSummary("Server");
 		PackagesService packagesService=new PackagesServiceImpl(SessionFactory);
 		try {
 			packagesService.save(packages);
@@ -119,7 +176,7 @@ public class TestEmp {
 		}
 		
 		EquipmentBulk equipmentbulk=new EquipmentBulk();
-		equipmentbulk.setEquipmentsId(equipmentsService.getEquipments(1));
+		equipmentbulk.setEquipmentsId(equipmentsService.getEquipments(3));
 		equipmentbulk.setPackageID(packagesService.getPackagess(1));
 		equipmentbulk.setQuantity(3);
 		EquipmentsBulkService equipmentsBulkService=new EquipmentBulkServiceImpl(SessionFactory);
