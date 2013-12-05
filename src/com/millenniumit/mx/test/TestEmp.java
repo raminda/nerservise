@@ -47,7 +47,7 @@ public class TestEmp {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args){
-		
+		Date date=new Date();
 		Sfactory sfactory=new Sfactory();
 		SessionFactory SessionFactory=sfactory.getSessionFactory();
 		
@@ -71,6 +71,7 @@ public class TestEmp {
 		equipments.setTec_Descrip("Base");
 		equipments.setSummary("Base");
 		equipments.setPrice(0);
+		equipments.setEOLDate(date);
 		EquipmentsService equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
 		try {
 			equipmentsService.save(equipments);	
@@ -118,6 +119,7 @@ public class TestEmp {
 		equipments.setTec_Descrip("Tec Eq1 is most best");
 		equipments.setSummary("best eq in eq1 catagory");
 		equipments.setPrice(1000);
+		equipments.setEOLDate(date);
 		equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
 		try {
 			equipmentsService.save(equipments);	
@@ -132,6 +134,7 @@ public class TestEmp {
 		equipments.setTec_Descrip("Tec Eq1 is most best");
 		equipments.setSummary("best eq in eq1 catagory");
 		equipments.setPrice(1000);
+		equipments.setEOLDate(date);
 		equipmentsService=new EquipmentsServiceImpl(SessionFactory);	
 		try {
 			equipmentsService.save(equipments);	
@@ -159,8 +162,6 @@ public class TestEmp {
 		} catch (Exception e) {
 			System.out.println("Project  : "+e.getMessage());
 		}
-		
-		Date date=new Date();
 		
 		Packages packages=new  Packages();
 		packages.setBasePrice(100);

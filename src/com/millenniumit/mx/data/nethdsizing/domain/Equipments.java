@@ -1,6 +1,7 @@
 package com.millenniumit.mx.data.nethdsizing.domain;
 import java.io.Serializable;
-import java.util.Calendar;
+import java.util.Date;
+
 import javax.persistence.*;
 
 
@@ -22,7 +23,7 @@ public class Equipments extends AuditFields implements Serializable {
 	@GeneratedValue(strategy=GenerationType.TABLE,generator="ColumnHandl")
 	private Integer ID;
 	
-	@ManyToOne(cascade= CascadeType.PERSIST)
+	@ManyToOne(cascade= CascadeType.ALL)
 	@JoinColumn(name = "ItemTypes",nullable=false)
 	private ItemTypes ItemTypes;
 	
@@ -35,7 +36,7 @@ public class Equipments extends AuditFields implements Serializable {
 
 	private String Comments;
 
-	private Calendar EOLDate;
+	private Date EOLDate;
 
 	private double Price;
 	/**
@@ -125,14 +126,14 @@ public class Equipments extends AuditFields implements Serializable {
 	/**
 	 * @return the eOLDate
 	 */
-	public Calendar getEOLDate() {
+	public Date getEOLDate() {
 		return EOLDate;
 	}
 
 	/**
 	 * @param eOLDate the eOLDate to set
 	 */
-	public void setEOLDate(Calendar EOLDate) {
+	public void setEOLDate(Date EOLDate) {
 		this.EOLDate = EOLDate;
 	}
 
