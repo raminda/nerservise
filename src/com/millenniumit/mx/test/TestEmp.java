@@ -93,7 +93,7 @@ public class TestEmp {
 		}
 	
 		itemTypes =new ItemTypes();
-		itemTypes.setAccsessLevel(2);
+		itemTypes.setAccsessLevel(1);
 		itemTypes.setTypeName("Ram");
 		itemTypesService=new ItemTypesServiceImpl(SessionFactory);
 		try {
@@ -191,7 +191,6 @@ public class TestEmp {
 		projectItems.setPackageID(packagesService.getPackagess(1));
 		projectItems.setPackageType("Base");
 		projectItems.setQuantity(4);
-		projectItems.setSiteID("Main");
 		ProjectItemsService projectItemsService=new ProjectItemsServiceImpl(SessionFactory);
 		try {
 			projectItemsService.save(projectItems);
@@ -202,6 +201,7 @@ public class TestEmp {
 		VersionMap versionMap=new VersionMap();
 		versionMap.setOptionID("Op12");
 		versionMap.setVersion("sdfsdf");
+		versionMap.setSiteID("Main");
 		versionMap.setProjectID(projectsService.getProjects(1));
 		VersionMapService versionMapService=new VersionMapServicempl(SessionFactory);
 		try {
